@@ -5,10 +5,13 @@ window.addEventListener("load", start);
 async function start() {
   // const data = getData();
   const kyle = await getData("kyle.json");
+  const tuong = await getData(
+    "https://raw.githubusercontent.com/TheDanishMexican/object-south-park/main/data/app.json"
+  );
   //   showAllCharacters();
   showCharacter(kyle);
   showCharacter(kyle);
-  showCharacter(kyle);
+  showCharacter(tuong);
 }
 
 async function getData(url) {
@@ -35,21 +38,18 @@ function showCharacter(character) {
   document
     .querySelector("#characters article:last-child")
     .addEventListener("click", characterClicked);
-}
 
-function characterClicked(character) {
-  showCharacterModal(character);
+  function characterClicked() {
+    showCharacterModal(character);
+  }
 }
 
 function showCharacterModal(character) {
   console.log(character);
+  console.log(character);
   document.querySelector("#dialog_image").src = character.image;
   document.querySelector("#dialog_title").textContent = character.name;
   document.querySelector("#dialog_religion").textContent = character.religion;
-  let description = generateDescription(character);
-  document.querySelector("#dialog_character_description").textContent =
-    description;
-
   document.querySelector("#dialog_gender").textContent = character.gender;
   document.querySelector("#dialog_hair_color").textContent =
     character.hairColor;

@@ -74,7 +74,7 @@ main {
   margin: 10px 0;
 }
 
-/* .grid-container .btns {
+.grid-container .btns {
   padding: 1em 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -125,11 +125,11 @@ dialog {
   padding: 2em 1em;
 }
 
-dialog::backdrop {
+/* dialog::backdrop {
   background: rgb(255, 211, 238);
-}
+} */
 
 .dialog-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
+  grid-template-columns: 1fr;
+}
