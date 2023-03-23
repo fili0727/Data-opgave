@@ -17,8 +17,45 @@
     <footer class="grid_footer">
       <p>South Park karakterer af Filippa Arildsen</p>
     </footer>
-    <dialog>
-        
+    <dialog id="dialog_character">
+      <section class="dialog-grid">
+        <figure>
+          <img
+            id="dialog_image"
+            src="https://upload.wikimedia.org/wikipedia/en/2/25/KyleBroflovski.png"
+            alt="Kyle Broflovski"
+          />
+        </figure>
+        <article>
+          <h2 id="dialog_title"></h2>
+          <h3 id="dialog_religion"></h3>
+          <p id="dialog_character_description"></p>
+          <section>
+            <h4>Personal Info</h4>
+            <ul>
+              <li>Gender: <span id="dialog_gender"></span></li>
+              <li>Hair Color: <span id="dialog_hair_color"></span></li>
+              <li>Occupation: <span id="dialog_occupation"></span></li>
+              <li>Catchphrase: <span id="dialog_catchphrase"></span></li>
+              <li>Appearances: <span id="dialog_appearances"></span></li>
+              <li>
+                First Appearance: <span id="dialog_first_appearance"></span>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>Voiced by</h4>
+            <p>
+              <span id="dialog_name">Character</span> is voiced by
+              <span id="dialog_voiced_by_name">actor name</span>.
+            </p>
+          </section>
+        </article>
+      </section>
+      <form method="dialog">
+        <button id="btn_cancel">Close</button>
+      </form>
     </dialog>
     <script src="app.js"></script>
   </body>
