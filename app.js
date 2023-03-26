@@ -46,23 +46,26 @@ function showCharacter(character) {
 
 function showCharacterModal(character) {
   console.log(character);
-  console.log(character);
+  //img
   document.querySelector("#dialog_image").src = character.image;
-  document.querySelector("#dialog_title").textContent = character.name;
+  //name
+  document.querySelector("#dialog_name").textContent = character.name;
+  document.querySelector("#dialog_nickname").textContent = character.nickname;
+  //personal info
   document.querySelector("#dialog_religion").textContent = character.religion;
   document.querySelector("#dialog_gender").textContent = character.gender;
   document.querySelector("#dialog_hair_color").textContent =
     character.hairColor;
   document.querySelector("#dialog_occupation").textContent =
     character.occupation;
+  document.querySelector("#dialog_grade").textContent = character.schoolGrade;
   document.querySelector("#dialog_catchphrase").textContent =
     character.catchPhrase;
   document.querySelector("#dialog_appearances").textContent =
     character.appearances;
   document.querySelector("#dialog_first_appearance").textContent =
     character.firstAppearance;
-
-  document.querySelector("#dialog_name").textContent = character.name;
+  //voiced by
   document.querySelector("#dialog_voiced_by_name").textContent =
     character.voicedBy;
 

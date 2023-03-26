@@ -51,16 +51,38 @@ main {
   .grid-container {
     grid-template-columns: 1fr 1fr;
   }
+  .dialog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .dialog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (min-width: 1200px) {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  .dialog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (min-width: 1500px) {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .dialog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -70,66 +92,26 @@ main {
   cursor: pointer;
 }
 
-.grid-item p {
-  margin: 10px 0;
-}
-
-.grid-container .btns {
-  padding: 1em 0 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-}
-
-.grid-container .btns button {
-  width: 100%;
-}
-
 form {
-  margin: 2em auto 0;
-  background-color: rgb(255, 211, 238);
-  padding: 1em 1em 2em;
   text-align: center;
 }
 
 button {
   font-weight: 300;
-  font-size: 1em;
+  font-size: 15px;
   text-align: center;
   cursor: pointer;
-  border: none;
-  border-radius: 0;
   color: #f2f2f2;
   background-color: hotpink;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 0.5em 1em;
+  padding: 5px 5px;
   width: 100%;
   max-width: 380px;
-}
-
-input {
-  margin: 1em auto;
-  width: 100%;
-  max-width: 350px;
-  padding: 1em;
-  border: 2px solid hotpink;
-  display: block;
-  background: #f1f1f1;
 }
 
 dialog {
   border-color: hotpink;
   background-color: rgb(255, 211, 238);
-  width: 65vw;
+  width: 40%;
+  height: 80%;
   padding: 2em 1em;
-}
-
-/* dialog::backdrop {
-  background: rgb(255, 211, 238);
-} */
-
-.dialog-grid {
-  display: grid;
-  grid-template-columns: 1fr;
 }
