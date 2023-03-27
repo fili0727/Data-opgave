@@ -4,14 +4,11 @@ window.addEventListener("load", start);
 
 async function start() {
   // const data = getData();
-  const kyle = await getData("kyle.json");
-  const tuong = await getData(
-    "https://raw.githubusercontent.com/TheDanishMexican/object-south-park/main/data/app.json"
+  const characters = await getData(
+    "https://cederdorff.github.io/dat-js/05-data/southpark.json"
   );
   //   showAllCharacters();
-  showCharacter(kyle);
-  showCharacter(kyle);
-  showCharacter(tuong);
+  characters.forEach(showCharacter);
 }
 
 async function getData(url) {
@@ -20,27 +17,31 @@ async function getData(url) {
   return data;
 }
 
-// function showAllCharacters(character) {
-//   showCharacter(kyle);
-// }
-
 function showCharacter(character) {
-  const html = /*html*/ `
+  if (
+    character.nickname === null ||
+    character.nickname === "undefined" ||
+    character.nickname === undefined ||
+    character.nickname === "null"
+  ) {
+    hasNickname(character);
+  } else {
+    const html = /*html*/ `
             <article class="grid-item">
                 <img src="${character.image}">
                 <h2>${character.name}</h2>
                 <p>nickname: ${character.nickname}</p>
                 <p>Age: ${character.age}</p>
-                <p>Voiced by ${character.voicedBy}</p>
             </article>
         `;
-  document.querySelector("#characters").insertAdjacentHTML("beforeend", html);
-  document
-    .querySelector("#characters article:last-child")
-    .addEventListener("click", characterClicked);
+    document.querySelector("#characters").insertAdjacentHTML("beforeend", html);
+    document
+      .querySelector("#characters article:last-child")
+      .addEventListener("click", characterClicked);
 
-  function characterClicked() {
-    showCharacterModal(character);
+    function characterClicked() {
+      showCharacterModal(character);
+    }
   }
 }
 
@@ -68,9 +69,27 @@ function showCharacterModal(character) {
   //voiced by
   document.querySelector("#dialog_voiced_by_name").textContent =
     character.voicedBy;
-
   // show dialog
   document.querySelector("#dialog_character").showModal();
+}
+
+function hasNickname(character) {
+  const html = /*html*/ `
+            <article class="grid-item">
+                <img src="${character.image}">
+                <h2>${character.name}</h2>
+
+                <p>Age: ${character.age}</p>
+            </article>
+        `;
+  document.querySelector("#characters").insertAdjacentHTML("beforeend", html);
+  document
+    .querySelector("#characters article:last-child")
+    .addEventListener("click", characterClicked);
+
+  function characterClicked() {
+    showCharacterModal(character);
+  }
 }
 
 function showDialog(charatcer) {}

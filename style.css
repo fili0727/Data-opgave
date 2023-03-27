@@ -13,18 +13,18 @@ body {
 img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 header {
   background-color: hotpink;
   color: #f1f1f1;
   padding: 15px;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 999;
   text-align: center;
 }
 
@@ -114,4 +114,8 @@ dialog {
   width: 40%;
   height: 80%;
   padding: 2em 1em;
+}
+
+img {
+  -webkit-user-drag: none;
 }
