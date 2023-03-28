@@ -3,14 +3,14 @@
   "nickname": "\"Daywalker\"",
   "image": "https://upload.wikimedia.org/wikipedia/en/2/25/KyleBroflovski.png",
   "occupation": "student",
-  "age": "10",
+  "age": 10,
   "voicedBy": "Matt Stone",
   "gender": "male",
   "religion": "Judaism",
   "catchPhrase": "\"God Dammit Cartman!\"",
   "hairColor": "red",
   "schoolGrade": 4,
-  "episodes": null,
-  "appearances": null,
+  "episodes": "S01E01 to S26E05",
+  "appearances": 317,
   "firstAppearance": "S01E01"
 }
