@@ -3,7 +3,6 @@
 window.addEventListener("load", start);
 
 async function start() {
-  // const data = getData();
   const characters = await getData(
     "https://cederdorff.github.io/dat-js/05-data/southpark.json"
   );
@@ -22,6 +21,7 @@ function showCharacter(character) {
     character.nickname === null ||
     character.nickname === "undefined" ||
     character.nickname === undefined ||
+    character.nickname === "Unkown" ||
     character.nickname === "null"
   ) {
     hasNickname(character);
@@ -30,7 +30,7 @@ function showCharacter(character) {
             <article class="grid-item">
                 <img src="${character.image}">
                 <h2>${character.name}</h2>
-                <p>nickname: ${character.nickname}</p>
+                <p>Nickname: ${character.nickname}</p>
                 <p>Age: ${character.age}</p>
             </article>
         `;
@@ -91,13 +91,3 @@ function hasNickname(character) {
     showCharacterModal(character);
   }
 }
-
-function showDialog(charatcer) {}
-
-function closeDialog() {}
-
-function getDescription() {}
-
-function formatDate() {}
-
-function calcAge() {}
