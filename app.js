@@ -1,4 +1,4 @@
-"use strict";
+ht"use strict";
 
 window.addEventListener("load", start);
 
